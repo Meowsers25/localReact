@@ -1,31 +1,23 @@
 import React from "react";
 import Joke from "./Joke";
+import jokesData from "./jokesData";
 
 function App() {
-  return (
-    <div>
-      <Joke
-        question="What's the best thing about Switzerland?"
-        punchLine="I don't know, but the flag is a big plus!"
-      />
-      <Joke
-        // question="Did you hear about the mathematician who's afraid of negative numbers?"
-        punchLine="He'll stop at nothing to avoid them!"
-      />
-      <Joke
-        question="Hear about the new restaurant called Karma?"
-        punchLine="There’s no menu: You get what you deserve."
-      />
-      <Joke
-        question="Did you hear about the actor who fell through the floorboards?"
-        punchLine="He was just going through a stage."
-      />
-      <Joke
-        question="Did you hear about the claustrophobic astronaut?"
-        punchLine="He just needed a little space."
-      />
-    </div>
-  );
+  // quick example of higher order method
+  // const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // const doubled = nums.map(function(num) {
+  //   return num * 2;
+  // });
+  // console.log(doubled);
+
+  const jokeComponents = jokesData.map(joke => {
+    return (
+      <Joke key={joke.id} question={joke.question} punchLine={joke.punchLine} />
+    );
+  });
+  // console.log(jokeComponents);
+
+  return <div>{jokeComponents}</div>;
 }
 
 export default App;
