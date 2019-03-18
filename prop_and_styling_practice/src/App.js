@@ -9,7 +9,7 @@ function App() {
         punchLine="I don't know, but the flag is a big plus!"
       />
       <Joke
-        question="Did you hear about the mathematician who's afraid of negative numbers?"
+        // question="Did you hear about the mathematician who's afraid of negative numbers?"
         punchLine="He'll stop at nothing to avoid them!"
       />
       <Joke
