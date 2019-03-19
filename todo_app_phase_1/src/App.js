@@ -1,15 +1,12 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import todosData from "./todosData";
 
 function App() {
-  return (
-    <div className="placeCard">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-    </div>
-  );
+  const todoItems = todosData.map(item => (
+    <TodoItem key={item.id} item={item} />
+  ));
+  return <div className="placeCard">{todoItems}</div>;
 }
 
 export default App;

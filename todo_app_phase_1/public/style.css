@@ -1,6 +1,7 @@
 .placeCard {
   width: 175px;
   height: 230px;
+  overflow: auto;
   border: 1px solid #cccccc;
   margin: 0 auto;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function TodoItem() {
+function TodoItem(props) {
   const inline = {
     display: "inline-block",
     float: "left",
@@ -14,9 +14,9 @@ function TodoItem() {
 
   return (
     <div>
-      <input style={inline} type="checkbox" />
+      <input style={inline} type="checkbox" checked={props.item.completed} />
 
-      <p>Placeholder text here</p>
+      <p>{props.item.text}</p>
       <hr style={width} />
     </div>
   );
