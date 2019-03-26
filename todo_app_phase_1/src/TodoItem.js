@@ -14,7 +14,12 @@ function TodoItem(props) {
 
   return (
     <div>
-      <input style={inline} type="checkbox" checked={props.item.completed} />
+      <input
+        style={inline}
+        type="checkbox"
+        checked={props.item.completed}
+        onChange={() => console.log("On Change")}
+      />
 
       <p>{props.item.text}</p>
       <hr style={width} />
