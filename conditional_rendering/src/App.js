@@ -8,7 +8,8 @@ class App extends Component {
       isLoading: true
     };
   }
-
+  // componentDidMount is simulating a page load
+  // for this exercise
   componentDidMount() {
     setTimeout(() => {
       this.setState({
@@ -19,7 +20,11 @@ class App extends Component {
 
   render() {
     return (
-      <div>{this.state.isLoading ? <h1>Loading....</h1> : <Conditional />}</div>
+      <div>
+        <h1>Navbar</h1>
+        {this.state.isLoading ? <h1>Loading....</h1> : <Conditional />}
+        <h1>Footer</h1>
+      </div>
     );
   }
 }
