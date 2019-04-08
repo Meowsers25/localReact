@@ -12,6 +12,12 @@ function TodoItem(props) {
     width: "80%"
   };
 
+  const finished = {
+    fontStyle: "italic",
+    color: "#cdcdcd",
+    textDecoration: "line-through"
+  };
+
   return (
     <div>
       <input
@@ -21,7 +27,7 @@ function TodoItem(props) {
         onChange={() => props.handleChange(props.item.id)}
       />
 
-      <p>{props.item.text}</p>
+      <p style={props.item.completed ? finished : null}>{props.item.text}</p>
       <hr style={width} />
     </div>
   );
